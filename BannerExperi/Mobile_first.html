@@ -1,0 +1,28 @@
+<!doctype HTML>
+<html>
+<head>
+<script src="../js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="Banner/Banner.js"></script>
+</head>
+<body>
+<div id="outer">
+	<div class="pointerGroup">
+	</div>
+	<div id="inner">
+		<a href="#"><img src="../IMG/20160419150316285.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160218105307416.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160419150316285.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160218105307416.jpg" alt=""></a>
+
+	</div>
+	<div id="left" class="arrow arrowLeft">
+		<img src="../Img/Arrow-left.png"/>
+	</div>
+	<div id="right" class="arrow arrowRight">
+		<img src="../Img/Arrow-right.png"/>
+	</div>
+</div>
+<script type="text/javascript">
+	$("#outer").BannerScroll({right:"right",left:"left",timer:8000}); 
+</script>
+</body>

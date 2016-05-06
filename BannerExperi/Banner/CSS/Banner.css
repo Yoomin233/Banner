@@ -1,0 +1,74 @@
+div#outer{
+	width: 100%;
+	min-width: 1200px;
+	height: 400px;
+	overflow:hidden;
+	position: relative;
+}
+div#inner{
+	width: 400%;
+	height: 400px;
+	position: relative;
+}
+div#inner>a{
+	display: inline-block;
+	float:left;
+	height: 400px;
+	width: 25%;
+	overflow: hidden;
+	text-align: center;
+}
+div#inner>a>img{
+	position: relative;
+	left:50%;
+	transform: translateX(-50%);
+}
+div.pointerGroup{
+
+	height: 30px;
+	position: absolute;
+	
+	bottom: 20px;
+	z-index: 10;
+	left:50%;
+	transform: translate(-50%,0);
+
+}
+div.pointerGroup div.selectedPointer{
+	width: 75px;
+}
+div.pointerGroup div{
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 12.5px;
+	transition:width 0.5s ease;
+	cursor:pointer;
+	margin-right: 5px;
+}
+div.arrow{
+	z-index: 10;
+	position: absolute;
+	top:0px;
+	width:120px;
+	height: 400px;
+	background-color: rgba(255,255,255,0.1);
+	cursor: pointer;
+	padding-top: 150px;
+}
+div.arrow:hover{
+	background-color: rgba(255,255,255,0.3);
+}
+div.arrow:hover img{
+	transform: translateY(-5px);
+}
+div.arrow:active img{
+	transform: translateY(10px);
+}
+div.arrow img{
+	transition: all 0.2s ease;
+}
+div.arrowRight{
+	right:0px;
+}
