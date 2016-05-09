@@ -1,5 +1,4 @@
 ## Banner
-=====================
 基于jQuery的banner插件，简单易用
 [项目地址](https://github.com/YueminHu/Banner/)
 ##Banner是什么？
