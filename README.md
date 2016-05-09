@@ -5,10 +5,10 @@
 ##Banner是什么？
 Banner是一个轻量级的基于jQuery的图片轮播插件。
 ##特色
--简单明了的HTML结构（参考项目内的html代码）
--简易调用
--宽度自适应
--动态生成小圆点
+*简单明了的HTML结构（参考项目内的html代码）
+*简易调用
+*宽度自适应
+*动态生成小圆点
 ##使用
 ###HTML结构
 ```html
@@ -42,5 +42,11 @@ Banner是一个轻量级的基于jQuery的图片轮播插件。
 ```
 ###选项
 ```javascript
-
+right:string//左右按钮ID
+left:string
+speed:num,default:500//动画速度
+timer:num, default:3000//轮播间隔
+current:0,default:0//起始在第几屏
+inner:string,default:"Banner-inner"//内部要轮播元素的ID
+pointerGroup:string,default:"pointerGroup"//小圆点父元素
 ```
