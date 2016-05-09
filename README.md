@@ -1,9 +1,46 @@
-# Banner
+## Banner
+=====================
 基于jQuery的banner插件，简单易用
-在要使用Banner的元素上调用BannerScroll方法即可，根据内部元素数量动态生成小圆点，支持参数传入
-参数名|说明|类型|必填|默认值
----------------|-------------
-ID      |左右按钮DI  |string  |true|
-speed   |动画速度    |num     |false|   500
-timer   |播放间隔    |num     |false |  3000
-current |起始页      |num     |false|   0
+[项目地址](https://github.com/YueminHu/Banner/)
+##Banner是什么？
+Banner是一个轻量级的基于jQuery的图片轮播插件。
+##特色
+-简单明了的HTML结构（参考项目内的html代码）
+-简易调用
+-宽度自适应
+-动态生成小圆点
+##使用
+###HTML结构
+```html
+<div id="Banner-outer">
+	<div class="pointerGroup">
+	</div>
+	<div id="Banner-inner">
+		<a href="#"><img src="../IMG/20160419150316285.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160218105307416.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160419150316285.jpg" alt=""></a>
+		<a href="#"><img src="../IMG/20160218105307416.jpg" alt=""></a>
+
+	</div>
+	<div id="left" class="arrow arrowLeft">
+		<img src="../Img/Arrow-left.png"/>
+	</div>
+	<div id="right" class="arrow arrowRight">
+		<img src="../Img/Arrow-right.png"/>
+	</div>
+</div>
+```
+###引入CSS和JS文件
+```html
+<script type="text/javascript" src="Banner/Banner.js"></script>
+```
+###绑定元素
+```javascript
+<script type="text/javascript">
+	$("#Banner-outer").BannerScroll({right:"right",left:"left",timer:8000}); 
+</script>
+```
+###选项
+```javascript
+
+```
