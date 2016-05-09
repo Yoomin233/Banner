@@ -18,7 +18,7 @@ includeExtFile("Banner/CSS/Banner.css","css");
     		var speed=opt.speed?parseInt(opt.speed,10):500; //卷动速度，数值越大，速度越慢（毫秒）
             var timer=opt.timer?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
     		var current=opt.current?parseInt(opt.current):0;//起始页，默认为0（第一页）
-    		var _inner=this.eq(0).find("#inner");//获取要卷动的元素
+    		var _inner=opt.inner?this.eq(0).find("#"+opt.inner):this.eq(0).find("#Banner-inner");//获取要卷动的元素
     		var itemCount=_inner.children().length;//获取inner内部元素的个数
     		var innerWidth=itemCount+"00%";//获取内部容器宽度
     		_inner.css({"width":innerWidth})//设置内部容器宽度
