@@ -86,6 +86,7 @@ includeExtFile("Banner/CSS/Banner.css","css");
     		_btnR.on("click",scrollRight);//设置按钮的点击事件
     		_btnL.on("click",scrollLeft);
             _indicator.children().on("click",indicatorClick);
+            return this;
     	}
     })
 })(jQuery);
