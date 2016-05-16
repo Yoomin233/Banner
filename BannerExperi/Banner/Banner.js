@@ -11,13 +11,18 @@ includeExtFile("Banner/CSS/Banner.css","css");
 ;(function($){
     //BannerScroll jQuery plug-in by Yoomin @ 2016-05-06 16:39
     $.fn.extend({
-    	BannerScroll:function(opt,callback){
-    		if(!opt)var opt={};
+    	BannerScroll:function(options,callback){
+            //使用$.entend()方法来合并默认参数和传入参数
+            var opt=$.extend({
+                speed:500,
+                timer:3000,
+                current:0
+            },options);
     		var _btnR=$("#"+opt.right);//获取左右卷动按钮ID
-    		var _btnL=$("#"+opt.left);
-    		var speed=opt.speed?parseInt(opt.speed,10):500; //卷动速度，数值越大，速度越慢（毫秒）
-            var timer=opt.timer?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
-    		var current=opt.current?parseInt(opt.current):0;//起始页，默认为0（第一页）
+    		var _btnL=$("#"+op.left);
+    		var speed=opt.speed; //卷动速度，数值越大，速度越慢（毫秒）
+            var timer=opt.timer; //滚动的时间间隔（毫秒）
+    		var current=opt.current;//起始页，默认为0（第一页）
     		var _inner=opt.inner?this.eq(0).find("#"+opt.inner):this.eq(0).find("#Banner-inner");//获取要卷动的元素
     		var itemCount=_inner.children().length;//获取inner内部元素的个数
     		var innerWidth=itemCount+"00%";//获取内部容器宽度
